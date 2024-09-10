@@ -1,7 +1,22 @@
+function chkTypes<T, K, U >(arg1: T, arg2: K, arg3: U) {
+  // console.log("El tipo recibido es: ", typeof(arg1), typeof(arg2), typeof(arg3))
+  return ({arg1, arg2, arg3})
+}
+
 export default function Example() {
+  const miVar = chkTypes("Cadena",33, ['Uno', 'Dos'])
+  const animales = ["Perro", "Gato", "Loro"]
+
   return (
     <>
-      <div class="antialiased text-gray-900 px-6">
+    <div className="grid grid-auto">
+      <p className="w-100 bg-cyan-700 text-white">Esto es la página, función devuelve</p>
+      <section className="grid grid-cols-12 divide-x">
+        {animales.map((animal,index)  => <span key={index} className="bg-red-500 w-100">{animal}</span>)}
+      </section>
+    </div>
+    
+      {/* <div class="antialiased text-gray-900 px-6">
         <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
           <div class="py-8">
             <h1 class="text-4xl font-bold">@tailwindcss/forms examples</h1>
@@ -257,7 +272,7 @@ export default function Example() {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+      </>
   );
 }
