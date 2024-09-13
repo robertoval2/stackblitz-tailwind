@@ -1,278 +1,33 @@
-function chkTypes<T, K, U >(arg1: T, arg2: K, arg3: U) {
-  // console.log("El tipo recibido es: ", typeof(arg1), typeof(arg2), typeof(arg3))
-  return ({arg1, arg2, arg3})
-}
+import AcmeLogo from '@/app/ui/acme-logo';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
-export default function Example() {
-  const miVar = chkTypes("Cadena",33, ['Uno', 'Dos'])
-  const animales = ["Perro", "Gato", "Loro"]
-
+export default function Page() {
   return (
-    <>
-    <div className="grid grid-auto">
-      <p className="w-100 bg-cyan-700 text-white">Esto es la página, función devuelve</p>
-      <section className="grid grid-cols-12 divide-x">
-        {animales.map((animal,index)  => <span key={index} className="bg-red-500 w-100">{animal}</span>)}
-      </section>
-    </div>
-    
-      {/* <div class="antialiased text-gray-900 px-6">
-        <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
-          <div class="py-8">
-            <h1 class="text-4xl font-bold">@tailwindcss/forms examples</h1>
-            <p class="mt-2 text-lg text-gray-600">
-              An opinionated form reset designed to make form elements easy to
-              style with utility classes.
-            </p>
-            <div class="mt-4 flex space-x-4">
-              <a
-                class="text-lg underline"
-                href="https://github.com/tailwindlabs/tailwindcss-forms"
-              >
-                Documentation
-              </a>
-              <a class="text-lg underline" href="/kitchen-sink.html">
-                Kitchen Sink
-              </a>
-            </div>
-          </div>
-          <div class="py-12">
-            <h2 class="text-2xl font-bold">Unstyled</h2>
-            <p class="mt-2 text-lg text-gray-600">
-              This is how form elements look out of the box.
-            </p>
-            <div class="mt-8 max-w-md">
-              <div class="grid grid-cols-1 gap-6">
-                <label class="block">
-                  <span class="text-gray-700">Full name</span>
-                  <input type="text" class="mt-1 block w-full" placeholder="" />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Email address</span>
-                  <input
-                    type="email"
-                    class="mt-1 block w-full"
-                    placeholder="john@example.com"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">When is your event?</span>
-                  <input type="date" class="mt-1 block w-full" />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">What type of event is it?</span>
-                  <select class="block w-full mt-1">
-                    <option>Corporate event</option>
-                    <option>Wedding</option>
-                    <option>Birthday</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Additional details</span>
-                  <textarea class="mt-1 block w-full" rows="3"></textarea>
-                </label>
-                <div class="block">
-                  <div class="mt-2">
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input type="checkbox" checked />
-                        <span class="ml-2">
-                          Email me news and special offers
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="py-12">
-            <h2 class="text-2xl font-bold">Simple</h2>
-            <div class="mt-8 max-w-md">
-              <div class="grid grid-cols-1 gap-6">
-                <label class="block">
-                  <span class="text-gray-700">Full name</span>
-                  <input
-                    type="text"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    placeholder=""
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Email address</span>
-                  <input
-                    type="email"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    placeholder="john@example.com"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">When is your event?</span>
-                  <input
-                    type="date"
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">What type of event is it?</span>
-                  <select class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <option>Corporate event</option>
-                    <option>Wedding</option>
-                    <option>Birthday</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Additional details</span>
-                  <textarea
-                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                    rows="3"
-                  ></textarea>
-                </label>
-                <div class="block">
-                  <div class="mt-2">
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input
-                          type="checkbox"
-                          class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50"
-                          checked
-                        />
-                        <span class="ml-2">
-                          Email me news and special offers
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="py-12">
-            <h2 class="text-2xl font-bold">Underline</h2>
-            <div class="mt-8 max-w-md">
-              <div class="grid grid-cols-1 gap-6">
-                <label class="block">
-                  <span class="text-gray-700">Full name</span>
-                  <input
-                    type="text"
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                    placeholder=""
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Email address</span>
-                  <input
-                    type="email"
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                    placeholder="john@example.com"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">When is your event?</span>
-                  <input
-                    type="date"
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">What type of event is it?</span>
-                  <select class="block w-full mt-0 px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black">
-                    <option>Corporate event</option>
-                    <option>Wedding</option>
-                    <option>Birthday</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Additional details</span>
-                  <textarea
-                    class="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
-                    rows="2"
-                  ></textarea>
-                </label>
-                <div class="block">
-                  <div class="mt-2">
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input
-                          type="checkbox"
-                          class="border-gray-300 border-2 text-black focus:border-gray-300 focus:ring-black"
-                        />
-                        <span class="ml-2">
-                          Email me news and special offers
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="py-12">
-            <h2 class="text-2xl font-bold">Solid</h2>
-            <div class="mt-8 max-w-md">
-              <div class="grid grid-cols-1 gap-6">
-                <label class="block">
-                  <span class="text-gray-700">Full name</span>
-                  <input
-                    type="text"
-                    class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-                    placeholder=""
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Email address</span>
-                  <input
-                    type="email"
-                    class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-                    placeholder="john@example.com"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">When is your event?</span>
-                  <input
-                    type="date"
-                    class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-                  />
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">What type of event is it?</span>
-                  <select class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
-                    <option>Corporate event</option>
-                    <option>Wedding</option>
-                    <option>Birthday</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-                <label class="block">
-                  <span class="text-gray-700">Additional details</span>
-                  <textarea
-                    class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-                    rows="3"
-                  ></textarea>
-                </label>
-                <div class="block">
-                  <div class="mt-2">
-                    <div>
-                      <label class="inline-flex items-center">
-                        <input
-                          type="checkbox"
-                          class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500"
-                        />
-                        <span class="ml-2">
-                          Email me news and special offers
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main className="flex min-h-screen flex-col p-6">
+      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
+        <AcmeLogo />
+      </div>
+      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
+        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
+          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+            <strong>Welcome to Acme.</strong> This is the example for the{' '}
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
+              Next.js Learn Course
+            </a>
+            , brought to you by Vercel.
+          </p>
+          <Link
+            href="/login"
+            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
         </div>
-      </div> */}
-      </>
+        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
+          {/* Add Hero Images Here */}
+        </div>
+      </div>
+    </main>
   );
 }
